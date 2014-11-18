@@ -1,0 +1,65 @@
+version: 0.5
+looping: false
+use_ad_start: true
+width: 1382
+height: 2048
+orientation: portrait
+aspect_ratio: '0.6748'
+hotspots:
+  popup1:
+    left: 2.6%
+    top: 93.6%
+    width: 73.4%
+    height: 6.1%
+    options:
+      width: 400
+      height: 100
+      placement: above
+  object1:
+    left: 41.4%
+    top: 85.1%
+    width: 30.4%
+    height: 5.1%
+    options:
+      url: http://sky.com/evolved
+  object2:
+    left: 80.2%
+    top: 82.8%
+    width: 17.2%
+    height: 10.0%
+    options:
+      url: http://sky.com
+layers:
+  B1-1:
+  B1-2:
+    animations:
+    -
+      name: MoveInFromLeft
+      duration: 3000
+      delay: 3500
+  B1-3:
+  B1-4:
+    animations:
+    -
+      name: MoveInFromTop
+      duration: 1000
+      delay: 0
+  B1-5:
+    animations:
+    -
+      name: MoveInFromTop
+      duration: 1000
+      delay: 1000
+  B1-6:
+    animations:
+    -
+      name: ScaleUp
+      duration: 750
+      delay: 2000
+  B1-7:
+    animations:
+    -
+      name: ScaleUp
+      duration: 750
+      delay: 2750
+  B1-8:

@@ -1,0 +1,38 @@
+hotspot: "object"       # Or anything that isn't another widget
+  options:
+    url: string           # Optional
+  animations:
+    - name: string        # 'FadeIn' | 'FadeOut' | 'MoveInFromBottom' | 'MoveInFromTop' | 'MoveInFromLeft' | 'MoveInFromRight' | 'ScaleDown' | 'ScaleUp'
+      property: string    # e.g. opacity
+      start: string       # start value
+      end: string         # end value
+      delay: integer      # 250
+      duration: integer   # 1000
+      easing: string      # 'linear' | 'swing'
+      animations:         # Array of animations. Turtles. Chaining.
+  actions:                # An array of action data
+    - object: string      # Optional, default self
+      animation: string   # Optional
+      position: string    # <x>:<y> | 'original'
+      size: string        # <width>:<height> | 'original'
+      transition: string  # 'snap' | 'dissolve' | 'fadethroughblack' | 'flip'
+      page: string        # 'next' | 'previous' | n
+      event: string       # 'touch' | 'hscrub' | 'vscrub' => scrub events are always treated as flipbooks
+      command: string
+
+hotspot: "IPV"
+  options:
+    video: string
+    poster: string
+
+hotspot: "IPS"
+  options:
+    smooth: boolean
+    links:
+      - - url: string
+          top: percentage
+          left: percentage
+          width: percentage
+          height: percentage
+
+hotspot: "POPUP"
