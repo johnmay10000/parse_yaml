@@ -12,6 +12,7 @@ import           System.Posix.Files
 import           Control.Monad
 import           System.FilePath
 import           Data.List
+import           Definitions
 -- import qualified System.FilePath.FilePather.Find as FP
 -- import qualified System.FilePath.FilePather.FilterPredicate as FP
 -- import qualified System.FilePath.FilePather.FileType as FP
@@ -20,10 +21,14 @@ import           Data.List
 -- loopRead :: String -> IO([String])
 -- loopRead file = lines <$> readFile file
 main  = do
-        results <- Y.decodeFile "config.yml" :: IO ( Maybe Y.Value )
+        results <- Y.decodeFile "10-Sky/config.yml" :: IO ( Maybe Y.Value )
+        defs <- Y.decodeFile "definitions.yml" :: IO ( Maybe Y.Value )
 --      files <- getDirNames
         -- filenames <-
         -- dirs <- directories files
+--         putStrLn "Definitions"
+--         process definitions
+        putStrLn "Config"
         process results
         -- return (_)
 
@@ -53,8 +58,8 @@ main  = do
 dropList :: [FilePath]
 dropList = [".", "..", ".DS_Store"]
 
-definitions :: [String]
-definitions = ["",""]
+-- definitions :: [String]
+-- definitions = ["",""]
 
 process :: Maybe Y.Value -> IO ()
 process (Just v) = mapM_ print (processTopLevel v)
